@@ -1,0 +1,634 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ 
+}
+
+:root{
+    --primary-color : #fff;
+    --secondary-color : #EDB72A;
+    
+}
+
+a{
+    text-decoration: none;
+    color:var(--primary-color)
+}
+li{
+   list-style-type:none;
+
+}
+
+/* here we design a header part */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: var(--primary-color);
+    padding:10px;
+    font-size: 1.1rem;
+    gap: 5px;
+}
+
+.logo{
+max-width: 170px;
+}
+.logo img{
+
+    width: 100%;
+    vertical-align: middle;
+}
+
+/* here we design a nav in header */
+.nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-inline:16px;
+}
+
+.nav a::before{
+    position: absolute;
+    content: "";
+    width:100%; 
+    height: 2px;
+    background-color: #fff;
+    border-radius: 4px;
+    bottom: -5px;
+    transform-origin: center;
+    transition: all 0.25s ease-in;
+    transform: scaleX(0);
+
+  }
+  .nav a:hover::before{
+  
+     transform: scaleX(1);
+  }
+  
+.nav a{
+    transition: color 0.25s ease-out;
+    position: relative;
+    font-size:20px;
+    
+}
+.nav a:hover{
+    color: yellow;
+}
+
+.menu {
+  font-size: 28px;
+  display: none;
+  cursor: pointer;
+}
+.close-menu{
+    display: none;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+/* here we will design a whatsapp button always shown */
+
+.whatsapp_btn{
+   
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: green;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+
+
+}
+
+.whatsapp_btn::before{
+    content: "contact us";
+    position: absolute;
+    width: 90px;
+    padding: 4px 8px;
+    border-radius: 10px;
+    background-color: darkgreen;
+    transform: scale(0);
+    transform-origin: 100% 50%;
+    transition: transform 0.25s ease-in-out;
+    right: 60px;
+    text-align: center;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.whatsapp_btn:hover::before{
+    transform: scale(1);
+
+}
+.whatsapp_btn i{
+color: #fff;
+font-size: 24px;
+cursor: pointer;
+
+}
+
+/* here we will design a Hero section  */
+
+/* HERO CONTAINER */
+
+.hero{
+width: 100%;
+
+}
+.hero img{
+    width: 100%;
+}
+
+/* here we will design the CTA section */
+.cta-sec{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    background-color: orange;
+    padding: 20px;
+    gap: 10px;
+    margin-top: -20px;
+    
+}
+
+.trust_title{
+    color: rgb(11, 90, 11);
+    margin-top: 20px;
+}
+.sale_msg{
+    margin-block:1rem;
+    font-weight: bold;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.btn{
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    background-color: darkblue;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 5px;
+    outline: none;
+
+}
+
+#whatsapp{
+    background-color: green;
+}
+
+.btn:hover{
+    color: yellow;
+}
+hr{
+    width: 90%;
+    margin:40px auto;
+    border-radius: 2px;
+    border: 2px solid black;
+}
+
+/* here we will design the trust gain section  */
+
+.gain_trust{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:20px;
+    background-color: orange;
+ 
+}
+.gain_trust img{
+    /* max-width: 600px; */
+    width: 100%;
+    border-radius: 8px;
+}
+
+.trust_right{
+    max-width: 50%;
+}
+
+.gainTrust_title{
+    color: rgb(62, 58, 77);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.gainTrust_info{
+    font-size: 1.2rem;
+    color: midnightblue;
+    margin-top: 10px;
+    line-height:1.5rem;
+}
+
+/* here we will design the product section  */
+
+.sale_container{
+    text-align: center;
+    max-width: 800px;
+    margin: 60px auto;
+    color: darkblue;
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 8px;
+}
+.products_title{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.product_discription{
+    font-size: 22px;
+}
+
+/* here we design the prduct container */
+.products_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    
+}
+.products{
+    padding: 10px;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 30%;
+    min-width: 240px;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    gap: 14px;
+
+}
+
+.card img{
+    width: 100%;
+    border-radius: 4px;
+}
+
+.card_title{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card_price{
+    font-size: 1.2rem;
+}
+
+.org_price{
+    text-decoration-line: line-through;
+    margin-right: 5px;
+}
+
+.buyNow{
+    width: 80%;
+    margin-inline: auto;
+    padding: 12px 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: orange;
+    color: #000;
+    transition: background-color 0.25s ease-in-out;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+.buyNow:hover{
+    background-color: black;
+    color: #fff;
+   
+}
+
+/* here we will design the important cm message */
+
+.cm_message{
+    width: 90%;
+    /* background-color: orange; */
+    margin: 20px auto;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #ddd;
+    box-shadow: 2px 2px 8px 8px rgba(0, 0, 0, 0.04);
+   
+}
+
+.cm_message video{
+    display: block;
+    width: 80%;
+    min-width:200px;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+
+/* here we will design a why choose use section */
+
+.whyChoose_us{
+    text-align: center;
+    background-color: #ddd;
+    padding: 20px 10px;
+}
+.reason_title{
+    color: midnightblue;
+    margin-block: 16px;
+}
+.choose_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* margin: 10px auto; */
+    width: 100%;
+}
+
+.reason_card{
+    width: 18%;
+    min-width: 170px;
+    text-align: center;
+    padding: 10px;
+}
+
+.reason_card img{
+    width: 100%;
+    min-width: 90px;
+    max-width: 100px;
+}
+
+.reason_quality{
+    margin-block: 1rem;
+    font-size: 1.2rem;
+}
+
+/* here we will design a frequently ask question */
+
+/* FAQ SECTION */
+
+.faq_container{
+    background-color: #ddd;
+    padding: 8px;
+    margin-top: 10px;
+}
+.faq{
+    background-image: url("/01-css-part/03-bastan-festival/assits/happ.png");
+    border-radius:16px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    overflow: hidden;
+  max-width: 900px;
+  margin: 5px auto;
+  padding: 20px;
+  /* background-color: black; */
+}
+
+
+.faq-title{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* each box */
+
+.faq_item{
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* question button */
+
+.faq_question{
+  width: 100%;
+  text-align: left;
+  padding: 18px;
+  font-size: 18px;
+  background: midnightblue;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+/* answer */
+
+.faq_answer{
+  max-height: 0;
+  
+  overflow: hidden;
+  background: #f5f5f5;
+  /* padding: 20px 18px; */
+  transform: scale(0);
+  transition: all 0.35s ease-out;
+}
+
+/* when open */
+
+.faq_item.active .faq_answer{
+    transform: scale(1);
+  padding: 18px;
+  max-height: 200px;
+}
+
+
+.faq_item.active .plus{
+    display: none;
+}
+
+.plus{
+    font-size: 24px;
+}
+.minus{
+    display: none;
+    font-size: 30px;
+}
+
+.faq_item.active .minus{
+    display:inline-block;
+}
+
+/* here we will design the footer section  */
+
+footer{
+    background-color: darkblue;
+    color: #ddd;
+   
+}
+.upper_section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.logo_slogan{
+    max-width: 300px;
+    font-size: 1rem;
+  
+}
+
+.logo_slogan img{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom:10px;
+}
+
+
+.quick_links_footer ul,.contact_info_footer ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    flex-direction: column;
+    font-size: 1.1rem;
+    line-gap-override: #ddd;
+    margin-top: 10px;
+
+}
+
+.contact_info_footer li{
+    margin-bottom: 10px;
+}
+
+
+.quick_links_footer ul a:hover{
+    color: orange;
+}
+
+.footer_social{
+    margin-block : 20px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* here is the socai media icons */
+
+.icons{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer_icone{
+    display: block;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+
+.common{
+    color: rgb(255, 252, 87);
+}
+
+
+.instagram{
+    background-color: hotpink;
+    color: #000 ;
+}
+.tiktok{
+    background-color: #000;
+    color: #fff;
+}
+
+.lower_section{
+    text-align: center;
+    font-size: 1.1rem;
+    padding-bottom: 10px;
+    color: yellow;
+    margin-top: -30px;
+}
+/* ----------------  Media querry for  tablet---------------- */
+
+@media (max-width: 800px) {
+
+
+ .menu{
+    display: block;
+ }
+
+ .nav{
+    position: fixed;
+    top: 0;
+    right: -200%;
+    max-width: 260px;
+    height: 80vh;
+    transition: right 0.30s ease-in-out;
+    padding: 60px;
+    background-color: black;
+
+ }
+ nav.active{
+right: 0;
+ }
+
+ .nav ul{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
+
+ }
+  .nav ul a{
+    display: block;
+    border-radius: 4px;
+    
+    
+  }
+
+  
+
+ .close-menu{
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    
+ }
+
+ /* here we will design the trust section */
+.gain_trust{
+    flex-direction: column-reverse;
+    
+}
+}
